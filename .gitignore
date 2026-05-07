@@ -3,6 +3,7 @@ bin/
 obj/
 *.user
 .vs/
+publish/
 
 # Credentials — never commit this
 **/appsettings.Development.json
