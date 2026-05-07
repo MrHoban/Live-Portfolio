@@ -1,0 +1,18 @@
+# .NET build artifacts
+bin/
+obj/
+*.user
+.vs/
+
+# Credentials — never commit this
+**/appsettings.Development.json
+
+# Frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# OS
+.DS_Store
+Thumbs.db
