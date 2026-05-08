@@ -20,13 +20,13 @@ export default function About() {
           <div className="flex-1">
             <p className="text-sm uppercase tracking-[0.3em] text-blue-400 mb-4">About Me</p>
             <h2 className="text-4xl font-bold text-white mb-6 leading-tight">
-              SWE Student | NOC Technician<br />
+              SWE/Cloud Student | NOC Technician<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400">
                 Automationing Systems and Programming Apps
               </span>
             </h2>
             <p className="text-gray-400 leading-relaxed mb-8 max-w-lg">
-              B.S. Software Engineering student at WGU. I work as a NOC Technician at an MSP,
+              B.S. Cloud/Network student at WGU and Obtaining my Masters in DevOps, Software Engineering. I work as a NOC Technician at an MSP,
               managing enterprise infrastructure and building PowerShell automation tools to solve
               real-world problems.
             </p>
