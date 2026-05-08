@@ -25,7 +25,7 @@ export default function Hero() {
                 className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-[#111827] border border-blue-900/50 rounded-full px-4 py-1.5 flex items-center gap-2 whitespace-nowrap"
               >
                 <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
-                <span className="text-gray-300 text-xs">Open to SWE Internships</span>
+                <span className="text-gray-300 text-xs">Open to Cloud Engineering Internships</span>
               </motion.div>
             </div>
           </motion.div>
@@ -36,7 +36,7 @@ export default function Hero() {
             transition={{ duration: 0.7 }}
           >
             <p className="text-blue-400 text-xs uppercase tracking-[0.25em] mb-4">
-              SWE Student · NOC Technician · Automation
+              CNE Student · NOC Technician · Automation
             </p>
             <h1 className="text-5xl font-bold text-white mb-6 leading-tight">
               Building Systems<br />
@@ -46,7 +46,7 @@ export default function Hero() {
               </span>
             </h1>
             <p className="text-gray-400 leading-relaxed mb-6">
-              B.S. Software Engineering student at WGU. I work as a NOC Technician at an MSP,
+              B.S. Cloud/Networking Engineering student at WGU. I work as a NOC Technician at an MSP,
               managing enterprise infrastructure and building automation tools to solve real NOC
               problems. Hands-on with SentinelOne, NinjaOne, Acronis, and Microsoft 365.
             </p>
@@ -95,7 +95,7 @@ export default function Hero() {
               <span className="text-gray-500 text-xs ml-2 font-mono">profile.ps1</span>
             </div>
             <div className="p-6 font-mono text-sm leading-loose">
-              <p className="text-gray-500"># Software Engineer</p>
+              <p className="text-gray-500"># Cloud/Networking & DevOps Engineer</p>
               <p className="text-gray-300 mt-2">
                 <span className="text-blue-400">$engineer</span>{' '}
                 <span className="text-gray-500">=</span>{' '}
@@ -103,9 +103,9 @@ export default function Hero() {
               </p>
               <div className="ml-4">
                 <p><span className="text-sky-300">Name</span><span className="text-gray-500"> = </span><span className="text-green-300">"Joshua Hoban"</span></p>
-                <p><span className="text-sky-300">Degree</span><span className="text-gray-500"> = </span><span className="text-green-300">"Software Engineering - B.S"</span></p>
-                <p><span className="text-sky-300">Focus</span><span className="text-gray-500"> = </span><span className="text-green-300">"Software Dev / Automation"</span></p>
-                <p><span className="text-sky-300">Status</span><span className="text-gray-500"> = </span><span className="text-green-300">"Open to SWE Internships"</span></p>
+                <p><span className="text-sky-300">Degree</span><span className="text-gray-500"> = </span><span className="text-green-300">"Cloud/Networking Engineering - B.S"</span></p>
+                <p><span className="text-sky-300">Focus</span><span className="text-gray-500"> = </span><span className="text-green-300">"Cloud/Networking & DevOps"</span></p>
+                <p><span className="text-sky-300">Status</span><span className="text-gray-500"> = </span><span className="text-green-300">"Open to Cloud Engineering Internships"</span></p>
               </div>
               <p className="text-gray-300">&#125;</p>
               <p className="mt-3">
@@ -126,13 +126,13 @@ export default function Hero() {
             <p className="text-blue-400 font-mono text-sm mb-4">// about_me.txt</p>
             <h3 className="text-white font-bold text-xl mb-4">Who I Am</h3>
             <p className="text-gray-400 leading-relaxed mb-4">
-              I'm a Software Engineering student at WGU with hands-on experience in enterprise
+              I'm a Cloud/Network Engineering student at WGU with hands-on experience in enterprise
               IT infrastructure, PowerShell automation, and MSP environments. I spend my days
               managing Windows and MacOS environments, and my evenings writing code to automate
               the parts of the job that shouldn't require a human.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              If I'm not at my computer, I'm battling waves at the beach and getting burnt by the sun.
+              If I'm not at my computer, I'm battling waves at the beach and getting burnt by the sun or getting destroyed in League of Legends.
             </p>
           </motion.div>
         </div>
