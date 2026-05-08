@@ -55,7 +55,7 @@ export default function AboutPage() {
             <p className="text-sm uppercase tracking-[0.3em] text-blue-400 mb-3">About Me</p>
             <h1 className="text-5xl font-bold text-white mb-4 leading-tight">Joshua Hoban</h1>
             <p className="text-blue-300 text-lg mb-4">
-              Software/Cloud Engineering Student · NOC Technician
+              Cloud/Network Engineering Student · NOC Technician
             </p>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
@@ -74,7 +74,7 @@ export default function AboutPage() {
           <div>
             <h2 className="text-2xl font-bold text-white mb-4">Who I Am</h2>
             <p className="text-gray-400 leading-relaxed mb-4">
-              I'm a Software/Cloud Engineering student at WGU with hands-on experience in enterprise
+              I'm a Cloud/Network Engineering student at WGU with hands-on experience in enterprise
               IT infrastructure, PowerShell automation, and MSP environments. I spend my days managing
               Windows and RMM environments and my evenings writing code to automate the parts of the
               job that shouldn't require a human.
@@ -90,8 +90,8 @@ export default function AboutPage() {
               13 with Roblox LUA, then moved to Python, then C# and JavaScript in high school.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              I never planned on college, but as my career grew I found myself loving code more and
-              more which led me to pursue a degree in Cloud/Software Engineering.
+              I never planned on college as my parents never believed in it, but as my career and passion grew. I found myself loving IT more and
+              more which led me to pursue a degree in Cloud/Network Engineering.
             </p>
           </div>
         </motion.div>
