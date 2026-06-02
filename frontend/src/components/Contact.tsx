@@ -1,5 +1,6 @@
-import { useState, useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { useState } from 'react'
+import Reveal from './Reveal'
+import { SendIcon } from './icons'
 
 interface FormData {
   name: string
@@ -7,16 +8,33 @@ interface FormData {
   message: string
 }
 
+interface FormErrors {
+  name?: string
+  email?: string
+  message?: string
+}
+
 type Status = 'idle' | 'sending' | 'sent' | 'error'
 
+const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
 export default function Contact() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
   const [form, setForm] = useState<FormData>({ name: '', email: '', message: '' })
+  const [errors, setErrors] = useState<FormErrors>({})
   const [status, setStatus] = useState<Status>('idle')
+
+  const validate = (): boolean => {
+    const next: FormErrors = {}
+    if (!form.name.trim()) next.name = 'Name is required'
+    if (!emailRe.test(form.email.trim())) next.email = 'Enter a valid email'
+    if (form.message.trim().length < 10) next.message = 'Tell me a little more (10+ chars)'
+    setErrors(next)
+    return Object.keys(next).length === 0
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    if (!validate()) return
     setStatus('sending')
     try {
       const res = await fetch(`${import.meta.env.VITE_API_URL}/api/contact`, {
@@ -36,68 +54,90 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-32 px-6" ref={ref}>
-      <div className="max-w-2xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-        >
-          <p className="text-sm uppercase tracking-[0.2em] md:tracking-[0.3em] text-blue-400 mb-4 text-center">
-            Contact
-          </p>
-          <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 text-center">Get In Touch</h2>
-          <p className="text-gray-400 text-center mb-12">
-            Have a project in mind or want to connect? Send me a message.
-          </p>
+    <section className="section" id="contact">
+      <div className="wrap" style={{ maxWidth: 760 }}>
+        <Reveal className="sec-head">
+          <div style={{ textAlign: 'center', margin: '0 auto' }}>
+            <span className="eyebrow">
+              <span className="idx">04</span> / Contact
+            </span>
+            <h2 className="sec-title">Let's build something</h2>
+            <p className="sec-sub" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
+              Open to software engineering internships and collaboration. Drop a message and I'll
+              get back to you.
+            </p>
+          </div>
+        </Reveal>
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <input
-                type="text"
-                placeholder="Name"
-                required
-                value={form.name}
-                onChange={(e) => setForm({ ...form, name: e.target.value })}
-                className="bg-[#111827] border border-blue-900/50 text-white placeholder-gray-500 rounded-lg px-4 py-3 outline-none focus:border-blue-500 transition-colors text-sm md:text-base"
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                required
-                value={form.email}
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
-                className="bg-[#111827] border border-blue-900/50 text-white placeholder-gray-500 rounded-lg px-4 py-3 outline-none focus:border-blue-500 transition-colors text-sm md:text-base"
-              />
+        <Reveal>
+          <form className="contact-card" onSubmit={handleSubmit} noValidate>
+            <div className="form-row" style={{ marginBottom: 18 }}>
+              <div className={`field ${errors.name ? 'err' : ''}`}>
+                <label htmlFor="name">Name</label>
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Your name"
+                  value={form.name}
+                  onChange={(e) => setForm({ ...form, name: e.target.value })}
+                />
+                <span className="msg">{errors.name}</span>
+              </div>
+              <div className={`field ${errors.email ? 'err' : ''}`}>
+                <label htmlFor="email">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  value={form.email}
+                  onChange={(e) => setForm({ ...form, email: e.target.value })}
+                />
+                <span className="msg">{errors.email}</span>
+              </div>
             </div>
-            <textarea
-              placeholder="Message"
-              required
-              rows={5}
-              value={form.message}
-              onChange={(e) => setForm({ ...form, message: e.target.value })}
-              className="bg-[#111827] border border-blue-900/50 text-white placeholder-gray-500 rounded-lg px-4 py-3 outline-none focus:border-blue-500 transition-colors resize-none text-sm md:text-base"
-            />
-            <motion.button
-              type="submit"
-              disabled={status === 'sending'}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full py-3 bg-blue-600 hover:bg-blue-500 disabled:opacity-50 text-white rounded-lg font-medium transition-colors duration-200 cursor-pointer"
+            <div className={`field ${errors.message ? 'err' : ''}`} style={{ marginBottom: 22 }}>
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                rows={5}
+                placeholder="What would you like to build or talk about?"
+                value={form.message}
+                onChange={(e) => setForm({ ...form, message: e.target.value })}
+              />
+              <span className="msg">{errors.message}</span>
+            </div>
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: 16,
+                flexWrap: 'wrap',
+              }}
             >
-              {status === 'sending' ? 'Sending...' : 'Send Message'}
-            </motion.button>
-
-            {status === 'sent' && (
-              <p className="text-green-400 text-center text-sm">Message sent successfully!</p>
-            )}
-            {status === 'error' && (
-              <p className="text-red-400 text-center text-sm">
-                Something went wrong. Please try again.
-              </p>
-            )}
+              <span className="form-note">
+                <span className="dot" />
+                {status === 'sent'
+                  ? "Message sent — thanks! I'll be in touch."
+                  : status === 'error'
+                    ? 'Something went wrong. Please try again.'
+                    : 'Usually replies within a day'}
+              </span>
+              <button className="btn btn-primary" type="submit" disabled={status === 'sending'}>
+                {status === 'sending' ? (
+                  'Sending…'
+                ) : status === 'sent' ? (
+                  '✓ Sent'
+                ) : (
+                  <>
+                    <SendIcon />
+                    Send Message
+                  </>
+                )}
+              </button>
+            </div>
           </form>
-        </motion.div>
+        </Reveal>
       </div>
     </section>
   )

@@ -1,146 +1,167 @@
-import { motion, type Variants } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import AnimatedAvatar from '../components/AnimatedAvatar'
+import profileImg from '../assets/profile.jpg'
+import Reveal from '../components/Reveal'
+import Footer from '../components/Footer'
 
-const skills = [
-  'C#', '.NET Core', 'ASP.NET', 'React', 'TypeScript',
-  'PowerShell', 'Python', 'JavaScript', 'SQL Server',
-  'Azure', 'Active Directory', 'Git', 'SentinelOne', 'NinjaOne',
+const timeline = [
+  {
+    year: 'Age 10',
+    title: 'First PC build',
+    body: 'Built my first computer with my dad — the spark for everything that followed.',
+  },
+  {
+    year: 'Age 13',
+    title: 'First lines of code',
+    body: 'Started in Roblox Lua, then taught myself Python — hooked on making things work.',
+  },
+  {
+    year: 'High school',
+    title: 'C# & JavaScript',
+    body: 'Moved into C# and JavaScript, building small apps and leaning into real programming.',
+  },
+  {
+    year: 'Now',
+    title: 'NOC Technician & B.S. Software Engineering',
+    body: 'Working in an MSP/NOC environment while earning my degree at WGU on the C# track — building toward a software engineering & DevOps career.',
+  },
 ]
 
-const stats = [
-  { value: '12+', label: 'Projects / Repos' },
-  { value: '2/4', label: 'Degree Progress' },
-  { value: '6+', label: 'Years in IT' },
-  { value: '4',   label: 'Certs In Progress' },
+const chips = [
+  { label: 'C#', lead: true },
+  { label: 'ASP.NET Core', lead: true },
+  { label: '.NET 8' },
+  { label: 'EF Core' },
+  { label: 'TypeScript', lead: true },
+  { label: 'React', lead: true },
+  { label: 'JavaScript' },
+  { label: 'Tailwind' },
+  { label: 'PowerShell', lead: true },
+  { label: 'Python' },
+  { label: 'Java' },
+  { label: 'SQL Server' },
+  { label: 'Azure' },
+  { label: 'Git / GitHub' },
 ]
-
-const chipContainer: Variants = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { staggerChildren: 0.05 } },
-}
-
-const chip: Variants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  show:   { opacity: 1, scale: 1 },
-}
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen pt-24 pb-32 px-6">
-      <div className="max-w-5xl mx-auto">
-
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.4 }}
-        >
+    <>
+      <main className="wrap">
+        <Reveal>
           <Link
             to="/"
-            className="text-sm text-gray-400 hover:text-blue-400 transition-colors no-underline inline-flex items-center gap-2 mb-12"
+            className="sec-link"
+            style={{ display: 'inline-flex', marginTop: 106 }}
           >
-            ← Back to Home
+            &larr; Back to home
           </Link>
-        </motion.div>
+        </Reveal>
 
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-          className="flex flex-col md:flex-row items-center gap-16 mb-24"
-        >
-          <AnimatedAvatar />
-          <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-blue-400 mb-3">About Me</p>
-            <h1 className="text-5xl font-bold text-white mb-4 leading-tight">Joshua Hoban</h1>
-            <p className="text-blue-300 text-lg mb-4">
-              Cloud/Network Engineering Student · NOC Technician
-            </p>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              <span className="text-gray-400 text-sm">Open to Automation/Cloud Engineering Roles</span>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Story */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="grid md:grid-cols-2 gap-12 mb-24"
-        >
-          <div>
-            <h2 className="text-2xl font-bold text-white mb-4">Who I Am</h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
-              I'm a Cloud/Network Engineering student at WGU with hands-on experience in enterprise
-              IT infrastructure, PowerShell automation, and MSP environments. I spend my days managing
-              Windows and RMM environments and my evenings writing code to automate the parts of the
-              job that shouldn't require a human.
-            </p>
-            <p className="text-gray-400 leading-relaxed">
-              If I'm not at my computer, I'm battling waves at the beach and getting burnt by the sun.
-            </p>
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold text-white mb-4">How I Got Here</h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
-              I got into IT at 10 years old building my own PC with my father. Started programming at
-              13 with Roblox LUA, then moved to Python, then C# and JavaScript in high school.
-            </p>
-            <p className="text-gray-400 leading-relaxed">
-              I never planned on college as my parents never believed in it, but as my career and passion grew. I found myself loving IT more and
-              more which led me to pursue a degree in Cloud/Network Engineering.
-            </p>
-          </div>
-        </motion.div>
-
-        {/* Tech Stack */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="mb-24"
-        >
-          <h2 className="text-2xl font-bold text-white mb-8">Tech Stack</h2>
-          <motion.div
-            variants={chipContainer}
-            initial="hidden"
-            animate="show"
-            className="flex flex-wrap gap-3"
-          >
-            {skills.map((skill) => (
-              <motion.span
-                key={skill}
-                variants={chip}
-                className="px-4 py-2 bg-[#111827] border border-blue-900/50 text-blue-300 rounded-lg text-sm"
-              >
-                {skill}
-              </motion.span>
-            ))}
-          </motion.div>
-        </motion.div>
-
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6"
-        >
-          {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="bg-[#111827] border border-blue-900/30 rounded-xl p-6 text-center"
+        <div className="about-hero" style={{ paddingTop: 24 }}>
+          <Reveal className="photo-frame">
+            <img src={profileImg} alt="Joshua Hoban" />
+          </Reveal>
+          <Reveal delay={0.1}>
+            <span className="eyebrow">
+              <span className="idx">//</span> About me
+            </span>
+            <h1>Joshua Hoban</h1>
+            <p className="about-role">NOC &middot; Automation &rarr; Aspiring Software Engineer / DevOps</p>
+            <p
+              style={{
+                color: 'var(--dim)',
+                fontSize: '15.5px',
+                lineHeight: 1.7,
+                marginTop: 18,
+                maxWidth: '52ch',
+              }}
             >
-              <p className="text-3xl font-bold text-blue-400 mb-2">{stat.value}</p>
-              <p className="text-gray-400 text-xs uppercase tracking-widest">{stat.label}</p>
+              I build the systems and automations that keep things running — and I'm formalizing a
+              decade of self-taught engineering into a B.S. Software Engineering degree at WGU.
+            </p>
+            <div className="hero-cta" style={{ marginTop: 24 }}>
+              <Link className="btn btn-primary" to="/#contact">
+                Get in touch
+              </Link>
+              <a
+                className="btn btn-ghost"
+                href="https://github.com/MrHoban"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
             </div>
-          ))}
-        </motion.div>
+          </Reveal>
+        </div>
 
-      </div>
-    </main>
+        <Reveal className="prose-grid">
+          <div className="prose">
+            <h2>Who I am</h2>
+            <p>
+              I'm a Software Engineering student at WGU (C# track) with hands-on experience across
+              enterprise IT infrastructure, PowerShell automation, and MSP environments. By day I
+              work as a NOC technician — keeping Windows and macOS fleets healthy and responding to
+              real incidents.
+            </p>
+            <p>
+              By night, I write code to automate the parts of the job that shouldn't need a human,
+              and I'm steadily shifting from operations into building software full-time: APIs,
+              full-stack apps, and the tooling that ties systems together.
+            </p>
+            <p>
+              When I'm not at a keyboard, I'm battling waves at the beach (and getting burnt by the
+              sun), or getting destroyed in League of Legends.
+            </p>
+          </div>
+          <div className="prose">
+            <h2>How I got here</h2>
+            <p>
+              I got into IT at 10, building my first PC with my father. At 13 I wrote my first code
+              in Roblox Lua, then moved to Python, and picked up C# and JavaScript in high school.
+            </p>
+            <p>
+              College was never the plan — my family didn't see the value in it. But the deeper I
+              got into IT, the more I loved it, and the more I wanted to build real software. That
+              passion is what led me to pursue a Software Engineering degree, with a master's
+              planned right after.
+            </p>
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <div style={{ margin: '70px 0' }}>
+            <span className="eyebrow" style={{ marginBottom: 30, display: 'inline-flex' }}>
+              <span className="idx">//</span> The path
+            </span>
+            <div className="timeline" style={{ marginTop: 26 }}>
+              {timeline.map((t) => (
+                <div className="tl-item" key={t.year}>
+                  <div className="tl-yr">{t.year}</div>
+                  <h3>{t.title}</h3>
+                  <p>{t.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <div style={{ margin: '70px 0 110px' }}>
+            <span className="eyebrow" style={{ marginBottom: 24, display: 'inline-flex' }}>
+              <span className="idx">//</span> Tech stack
+            </span>
+            <div className="chips" style={{ marginTop: 24 }}>
+              {chips.map((c) => (
+                <span className={`chip ${c.lead ? 'lead' : ''}`} key={c.label}>
+                  {c.label}
+                </span>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+      </main>
+      <Footer />
+    </>
   )
 }
