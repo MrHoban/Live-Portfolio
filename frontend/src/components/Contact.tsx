@@ -12,7 +12,7 @@ const platforms = [
     icon: <LinkedInIcon />,
     label: 'LinkedIn',
     handle: 'in/joshuahoban',
-    href: 'https://linkedin.com/in/joshuahoban',
+    href: 'https://www.linkedin.com/in/joshua-hoban-258641276/',
   },
   {
     icon: <InstagramIcon />,
