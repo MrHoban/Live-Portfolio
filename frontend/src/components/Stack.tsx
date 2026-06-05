@@ -15,7 +15,7 @@ const groups: StackGroup[] = [
     desc: 'APIs, services, and data — my primary focus.',
     chips: [
       { label: 'C#', lead: true },
-      { label: 'ASP.NET Core', lead: true },
+      { label: 'Java', lead: true },
       { label: '.NET 8' },
       { label: 'EF Core' },
       { label: 'REST APIs' },
@@ -75,7 +75,7 @@ export default function Stack() {
             </span>
             <h2 className="sec-title">The tools I build with</h2>
             <p className="sec-sub">
-              A full-stack toolkit — from C#/.NET APIs and React frontends to PowerShell and Python
+              A full-stack toolkit — from C#/Java backends and React frontends to PowerShell and Python
               automation.
             </p>
           </div>

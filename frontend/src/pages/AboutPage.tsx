@@ -16,18 +16,18 @@ const timeline = [
   },
   {
     year: 'High school',
-    title: 'C# & JavaScript',
-    body: 'Moved into C# and JavaScript, building small apps and leaning into real programming.',
+    title: 'C#/Java & JavaScript',
+    body: 'Moved into C#, Java, and JavaScript, building small apps and leaning into real programming.',
   },
   {
     year: 'Now',
     title: 'NOC Technician & B.S. Software Engineering',
-    body: 'Working in an MSP/NOC environment while earning my degree at WGU on the C# track — building toward a software engineering & DevOps career.',
+    body: 'Working in an MSP/NOC environment while earning my degree at WGU on the C#/Java track — building toward a software engineering & DevOps career.',
   },
 ]
 
 const chips = [
-  { label: 'C#', lead: true },
+  { label: 'C#/Java', lead: true },
   { label: 'ASP.NET Core', lead: true },
   { label: '.NET 8' },
   { label: 'EF Core' },
@@ -37,7 +37,6 @@ const chips = [
   { label: 'Tailwind' },
   { label: 'PowerShell', lead: true },
   { label: 'Python' },
-  { label: 'Java' },
   { label: 'SQL Server' },
   { label: 'Azure' },
   { label: 'Git / GitHub' },
@@ -99,7 +98,7 @@ export default function AboutPage() {
           <div className="prose">
             <h2>Who I am</h2>
             <p>
-              I'm a Software Engineering student at WGU (C# track) with hands-on experience across
+              I'm a Software Engineering student at WGU (C#/Java track) with hands-on experience across
               enterprise IT infrastructure, PowerShell automation, and MSP environments. By day I
               work as a NOC technician — keeping Windows and macOS fleets healthy and responding to
               real incidents.
@@ -118,7 +117,7 @@ export default function AboutPage() {
             <h2>How I got here</h2>
             <p>
               I got into IT at 10, building my first PC with my father. At 13 I wrote my first code
-              in Roblox Lua, then moved to Python, and picked up C# and JavaScript in high school.
+              in Roblox Lua, then moved to Python, and picked up C#, Java, and JavaScript in high school.
             </p>
             <p>
               College was never the plan — my family didn't see the value in it. But the deeper I

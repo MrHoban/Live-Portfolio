@@ -27,9 +27,9 @@ const projects: Project[] = [
   {
     title: 'Portfolio API',
     description:
-      'The ASP.NET Core Web API behind this site — a typed contact endpoint with validation, DI, and global exception handling. Feature-folder architecture, deployed and serving production traffic.',
-    language: 'C#',
-    langColor: '#8a5cf6',
+      'The React Core Web API behind this site — a typed contact endpoint with validation, DI, and global exception handling. Feature-folder architecture, deployed and serving production traffic.',
+    language: 'React',
+    langColor: '#5c78f6',
     tags: [],
     link: 'https://joshuahoban.dev',
     linkLabel: '↗ joshuahoban.dev',

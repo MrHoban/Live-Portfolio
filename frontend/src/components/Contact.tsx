@@ -18,7 +18,7 @@ const platforms = [
     icon: <InstagramIcon />,
     label: 'Instagram',
     handle: '@mrhoban',
-    href: 'https://instagram.com/mrhoban',
+    href: 'https://instagram.com/mr.hoban',
   },
 ]
 

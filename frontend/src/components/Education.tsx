@@ -35,9 +35,9 @@ export default function Education() {
                     Enrolled
                   </span>
                 </div>
-                <div className="em">Western Governors University · C# Track</div>
+                <div className="em">Western Governors University · Software Engineering Track</div>
                 <div className="ed">
-                  Competency-based software engineering program centered on C#/.NET, OOP and SOLID
+                  Competency-based software engineering program centered on C#/Java, OOP and SOLID
                   principles, data structures, and full-stack development — aligned with how I
                   already build.
                 </div>

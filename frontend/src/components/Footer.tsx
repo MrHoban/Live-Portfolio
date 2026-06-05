@@ -18,7 +18,7 @@ export default function Footer() {
           </a>
           <a href="/#contact">Contact</a>
         </div>
-        <div className="foot-meta">© 2026 Joshua Hoban · Built with .NET + React</div>
+        <div className="foot-meta">© 2026 Joshua Hoban · Built with React</div>
       </div>
     </footer>
   )

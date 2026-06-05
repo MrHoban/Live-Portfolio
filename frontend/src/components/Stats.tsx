@@ -4,7 +4,7 @@ const stats = [
   { value: '6', unit: '+', label: 'Years in IT' },
   { value: '4', unit: '', label: 'Years Programming' },
   { value: '3', unit: '', label: 'Certifications' },
-  { value: 'B.S.', unit: '', label: 'SWE · C# Track' },
+  { value: 'B.S.', unit: '', label: 'SWE · C#/Java Track' },
 ]
 
 export default function Stats() {
