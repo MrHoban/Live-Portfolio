@@ -89,7 +89,7 @@ export default function Hero() {
           </h1>
           <p className="hero-lede">
             I'm <strong>Joshua Hoban</strong> &mdash; a B.S. Software Engineering student at WGU on the{' '}
-            <strong>/Java track</strong>. By day I keep enterprise infrastructure healthy as a NOC
+            <strong>C#/Java track</strong>. By day I keep enterprise infrastructure healthy as a NOC
             technician; nights and weekends I build <strong>.NET APIs</strong>, React frontends, Java Frameworks,
             and PowerShell automations that remove the work humans shouldn't have to do.
           </p>
