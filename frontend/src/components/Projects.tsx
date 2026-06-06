@@ -25,6 +25,16 @@ const featured = {
 
 const projects: Project[] = [
   {
+    title: 'AIOps Center',
+    description:
+      'Multi-tenant IT operations platform — unified dashboard, alert engine, automation workflows, vector-search knowledge base, and RAG-powered AI assistant. Built with RBAC, tenant isolation, Docker local dev, and GitHub Actions CI.',
+    language: 'TypeScript',
+    langColor: '#3178c6',
+    tags: ['Full-Stack', 'DevOps', 'AI'],
+    link: 'https://github.com/MrHoban/aiops-center',
+    linkLabel: 'View source',
+  },
+  {
     title: 'Portfolio API',
     description:
       'The React Core Web API behind this site — a typed contact endpoint with validation, DI, and global exception handling. Feature-folder architecture, deployed and serving production traffic.',
@@ -83,7 +93,7 @@ export default function Projects() {
             </span>
             <h2 className="sec-title">Things I've built</h2>
             <p className="sec-sub">
-              Automation toolkits, full-stack apps, and the API powering this very site.
+            Full-stack platforms, automation toolkits, and production-minded ops tooling.
             </p>
           </div>
           <a className="sec-link" href="https://github.com/MrHoban" target="_blank" rel="noreferrer">
