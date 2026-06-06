@@ -35,9 +35,9 @@ const projects: Project[] = [
     linkLabel: 'View source',
   },
   {
-    title: 'Portfolio API',
+    title: 'Live Portfolio',
     description:
-      'The React Core Web API behind this site — a typed contact endpoint with validation, DI, and global exception handling. Feature-folder architecture, deployed and serving production traffic.',
+      'This site — a React + TypeScript portfolio with animated UI, responsive layout, and Vercel deployment. Built with Vite, Tailwind, and Framer Motion.',
     language: 'React',
     langColor: '#5c78f6',
     tags: [],
