@@ -11,6 +11,7 @@ interface Project {
   link: string
   linkLabel: string
   live?: boolean
+  client?: boolean
 }
 
 const featured = {
@@ -24,6 +25,17 @@ const featured = {
 }
 
 const projects: Project[] = [
+  {
+    title: 'Betancourt Co',
+    description:
+      'Client website for a residential remodeling and construction business. Built with Next.js 15 App Router, TypeScript, and Tailwind — contact form powered by Resend, deployed on Vercel with a custom domain.',
+    language: 'Next.js',
+    langColor: '#ffffff',
+    tags: [],
+    link: 'https://betancourtco.com',
+    linkLabel: '↗ betancourtco.com',
+    client: true,
+  },
   {
     title: 'AIOps Center',
     description:
@@ -147,6 +159,9 @@ export default function Projects() {
                   <span className="lang-dot" style={{ background: p.langColor }} />
                   {p.language}
                 </div>
+                {p.client && (
+                  <span className="status-pill client">Client</span>
+                )}
                 {p.live && (
                   <span className="status-pill live">
                     <span className="dot" />

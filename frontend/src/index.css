@@ -260,6 +260,7 @@ section { position: relative; z-index: 1; }
 .edu-item .ed { color: var(--dim); font-size: 13.5px; margin-top: 8px; line-height: 1.6; }
 .status-pill { display: inline-flex; align-items: center; gap: 7px; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line-2); color: var(--dim); margin-left: 8px; vertical-align: middle; }
 .status-pill.live { color: var(--ok); border-color: rgba(var(--ok-rgb), 0.3); }
+.status-pill.client { color: var(--warn); border-color: rgba(226, 181, 82, 0.3); }
 
 .cert-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 30px 32px; }
 .cert-card h3 { font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
