@@ -10,9 +10,22 @@ interface StackGroup {
 
 const groups: StackGroup[] = [
   {
+    num: '</>',
+    title: 'Frontend',
+    desc: 'Typed, component-driven interfaces — my primary focus.',
+    chips: [
+      { label: 'TypeScript', lead: true },
+      { label: 'React', lead: true },
+      { label: 'JavaScript' },
+      { label: 'Tailwind' },
+      { label: 'Vite' },
+      { label: 'React Router' },
+    ],
+  },
+  {
     num: '{ }',
     title: 'Backend',
-    desc: 'APIs, services, and data — my primary focus.',
+    desc: 'APIs, services, and data — C# and Java projects.',
     chips: [
       { label: 'C#', lead: true },
       { label: 'Java', lead: true },
@@ -20,18 +33,6 @@ const groups: StackGroup[] = [
       { label: 'EF Core' },
       { label: 'REST APIs' },
       { label: 'SQL Server' },
-    ],
-  },
-  {
-    num: '</>',
-    title: 'Frontend',
-    desc: 'Typed, component-driven interfaces.',
-    chips: [
-      { label: 'TypeScript', lead: true },
-      { label: 'React', lead: true },
-      { label: 'JavaScript' },
-      { label: 'Tailwind' },
-      { label: 'Vite' },
     ],
   },
   {
@@ -75,7 +76,7 @@ export default function Stack() {
             </span>
             <h2 className="sec-title">The tools I build with</h2>
             <p className="sec-sub">
-              A full-stack toolkit — from C#/Java backends and React frontends to PowerShell and Python
+              A full-stack toolkit — React frontends, C#/Java backends, and PowerShell and Python
               automation.
             </p>
           </div>
