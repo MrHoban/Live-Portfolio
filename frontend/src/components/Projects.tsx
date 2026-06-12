@@ -26,7 +26,7 @@ const featured = {
 
 const projects: Project[] = [
   {
-    title: 'Betancourt Co',
+    title: 'Betancourt & Co',
     description:
       'Client website for a residential remodeling and construction business. Built with Next.js 15 App Router, TypeScript, and Tailwind — contact form powered by Resend, deployed on Vercel with a custom domain.',
     language: 'Next.js',
