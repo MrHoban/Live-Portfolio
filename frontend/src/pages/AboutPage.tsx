@@ -21,8 +21,8 @@ const timeline = [
   },
   {
     year: 'Now',
-    title: 'NOC Technician & B.S. Software Engineering',
-    body: 'Working in an MSP/NOC environment while earning my degree at WGU on the C#/Java track — building toward a software engineering & DevOps career.',
+    title: 'Software Engineer',
+    body: 'Software Engineer at Nationwide Loan Consultants while earning my B.S. in Cybersecurity at WGU — securing systems and building the tooling that supports them.',
   },
 ]
 
@@ -65,7 +65,7 @@ export default function AboutPage() {
               <span className="idx">//</span> About me
             </span>
             <h1>Joshua Hoban</h1>
-            <p className="about-role">NOC &middot; Automation &rarr; Aspiring Software Engineer / DevOps</p>
+            <p className="about-role">Software Engineer &middot; Nationwide Loan Consultants</p>
             <p
               style={{
                 color: 'var(--dim)',
@@ -76,7 +76,7 @@ export default function AboutPage() {
               }}
             >
               I build the systems and automations that keep things running — and I'm formalizing a
-              decade of self-taught engineering into a B.S. Software Engineering degree at WGU.
+              decade of self-taught engineering into a B.S. Cybersecurity degree at WGU.
             </p>
             <div className="hero-cta" style={{ marginTop: 24 }}>
               <Link className="btn btn-primary" to="/#contact">
@@ -98,15 +98,16 @@ export default function AboutPage() {
           <div className="prose">
             <h2>Who I am</h2>
             <p>
-              I'm a Software Engineering student at WGU (C#/Java track) with hands-on experience across
-              enterprise IT infrastructure, PowerShell automation, and MSP environments. By day I
-              work as a NOC technician — keeping Windows and macOS fleets healthy and responding to
-              real incidents.
+              I'm a Software Engineer at Nationwide Loan Consultants and a Cybersecurity
+              student at WGU, with hands-on experience across enterprise IT infrastructure,
+              PowerShell automation, and MSP/NOC environments. As the company's sole security owner I manage
+              firewalls, Microsoft 365 security and retention policies, and endpoint protection —
+              and build the tools that keep the environment safe.
             </p>
             <p>
               By night, I write code to automate the parts of the job that shouldn't need a human,
-              and I'm steadily shifting from operations into building software full-time: APIs,
-              full-stack apps, and the tooling that ties systems together.
+              and I blend security with development: APIs, full-stack apps, and the tooling that
+              ties systems together.
             </p>
             <p>
               When I'm not at a keyboard, I'm battling waves at the beach (and getting burnt by the
@@ -122,8 +123,7 @@ export default function AboutPage() {
             <p>
               College was never the plan — my family didn't see the value in it. But the deeper I
               got into IT, the more I loved it, and the more I wanted to build real software. That
-              passion is what led me to pursue a Software Engineering degree, with a master's
-              planned right after.
+              passion is what led me to pursue a Cybersecurity degree.
             </p>
           </div>
         </Reveal>

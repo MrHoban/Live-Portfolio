@@ -4,7 +4,11 @@ import { CheckIcon } from './icons'
 const certs = [
   { name: 'Certified Automation Specialist', issuer: 'NinjaOne' },
   { name: 'Azure Fundamentals (AZ-900)', issuer: 'Microsoft Certified' },
-  { name: 'Data Analytics with Python', issuer: 'Python · Professional Certificate' },
+  { name: 'ConnectWise PSA Help Desk', issuer: 'ConnectWise Certification' },
+  { name: 'Python Data Analytics & Data Structures', issuer: 'Python · Professional Certificate' },
+  { name: 'CompTIA Security+', issuer: 'In progress · target Dec 2026' },
+  { name: 'CompTIA Network+', issuer: 'In progress · target Dec 2026' },
+  { name: 'CompTIA A+', issuer: 'In progress · target Dec 2026' },
 ]
 
 export default function Education() {
@@ -29,29 +33,17 @@ export default function Education() {
               <div className="edu-mark">BS</div>
               <div>
                 <div className="et">
-                  B.S. Software Engineering
+                  B.S. Cybersecurity &amp; Information Assurance
                   <span className="status-pill live">
                     <span className="dot" />
                     Enrolled
                   </span>
                 </div>
-                <div className="em">Western Governors University · Software Engineering Track</div>
+                <div className="em">Western Governors University · Expected late 2028</div>
                 <div className="ed">
-                  Competency-based software engineering program centered on C#/Java, OOP and SOLID
-                  principles, data structures, and full-stack development — aligned with how I
-                  already build.
-                </div>
-              </div>
-            </div>
-            <div className="edu-item">
-              <div className="edu-mark">MS</div>
-              <div>
-                <div className="et">
-                  M.S. Software Engineering <span className="status-pill">Planned</span>
-                </div>
-                <div className="em">Next step after the B.S.</div>
-                <div className="ed">
-                  Continuing into a master's to deepen my software engineering and DevOps foundation.
+                  Competency-based program covering network and application security, identity and
+                  access management, risk and compliance, and incident response — paired with the
+                  development background I already build with.
                 </div>
               </div>
             </div>

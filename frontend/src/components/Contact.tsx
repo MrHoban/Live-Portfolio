@@ -33,7 +33,7 @@ export default function Contact() {
             </span>
             <h2 className="sec-title">Let's connect</h2>
             <p className="sec-sub" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
-              Open to software engineering internships and collaboration. Reach out on any platform.
+              Open to cybersecurity and development collaboration. Reach out on any platform.
             </p>
           </div>
         </Reveal>

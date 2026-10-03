@@ -15,8 +15,8 @@ const CsPane = () => (
     <span className="ln"> </span>{'\n'}
     <span className="ln"><span className="kw">var</span> joshua = <span className="kw">new</span> <span className="ty">Engineer</span>(</span>{'\n'}
     <span className="ln">    <span className="pr">Name</span>:    <span className="st">"Joshua Hoban"</span>,</span>{'\n'}
-    <span className="ln">    <span className="pr">Program</span>: <span className="st">"B.S. Software Engineering"</span>,</span>{'\n'}
-    <span className="ln">    <span className="pr">Focus</span>:   [<span className="st">"APIs"</span>, <span className="st">"Automation"</span>, <span className="st">"DevOps"</span>]);</span>{'\n'}
+    <span className="ln">    <span className="pr">Program</span>: <span className="st">"B.S. Cybersecurity"</span>,</span>{'\n'}
+    <span className="ln">    <span className="pr">Focus</span>:   [<span className="st">"Security"</span>, <span className="st">"Automation"</span>, <span className="st">"Development"</span>]);</span>{'\n'}
     <span className="ln"> </span>{'\n'}
     <span className="ln"><span className="ty">Console</span>.<span className="fn">WriteLine</span>(<span className="st">{'$"{joshua.Name} → shipping."'}</span>);</span>{'\n'}
     <span className="ln"><span className="cm">{'// > Joshua Hoban → shipping.'}</span> <span className="cursor-blink" /></span>
@@ -27,9 +27,9 @@ const PsPane = () => (
   <div className="code-pane active">
     <span className="ln"><span className="cm"># profile.ps1 — automation roots</span></span>{'\n'}
     <span className="ln"><span className="kw">$me</span> = <span className="op">@{'{'}</span></span>{'\n'}
-    <span className="ln">    <span className="pr">Role</span>  = <span className="st">"NOC Technician"</span></span>{'\n'}
+    <span className="ln">    <span className="pr">Role</span>  = <span className="st">"Software Engineer"</span></span>{'\n'}
     <span className="ln">    <span className="pr">Stack</span> = <span className="st">"PowerShell 7+"</span>, <span className="st">"Python"</span></span>{'\n'}
-    <span className="ln">    <span className="pr">Goal</span>  = <span className="st">"Software Engineer / DevOps"</span></span>{'\n'}
+    <span className="ln">    <span className="pr">Goal</span>  = <span className="st">"Cybersecurity Engineer"</span></span>{'\n'}
     <span className="ln"><span className="op">{'}'}</span></span>{'\n'}
     <span className="ln"> </span>{'\n'}
     <span className="ln"><span className="fn">Write-Host</span> <span className="st">"Ready to build."</span> <span className="op">-Foreground</span> <span className="ty">Cyan</span></span>{'\n'}
@@ -80,7 +80,7 @@ export default function Hero() {
         <Reveal className="hero-copy">
           <span className="hero-eyebrow">
             <span className="dot" />
-            NOC &middot; Automation &rarr; SWE / DevOps
+            Cyber Security &middot; Automation &middot; Development
           </span>
           <h1>
             Building backends and
@@ -88,9 +88,9 @@ export default function Hero() {
             automations that <span className="grad">actually ship.</span>
           </h1>
           <p className="hero-lede">
-            I'm <strong>Joshua Hoban</strong> &mdash; a B.S. Software Engineering student at WGU on the{' '}
-            <strong>C#/Java track</strong>. By day I keep enterprise infrastructure healthy as a NOC
-            technician; nights and weekends I build <strong>.NET APIs</strong>, React frontends, Java Frameworks,
+            I'm <strong>Joshua Hoban</strong> &mdash; a <strong>Software Engineer</strong> at{' '}
+            <strong>Nationwide Loan Consultants</strong> and a B.S. Cybersecurity student at WGU. As the
+            sole owner of security I run firewalls, Microsoft 365 security and endpoint protection, and build internal tooling; nights and weekends I build <strong>.NET APIs</strong>, React frontends, Java Frameworks,
             and PowerShell automations that remove the work humans shouldn't have to do.
           </p>
           <div className="hero-cta">
@@ -122,7 +122,7 @@ export default function Hero() {
               <img src={profileImg} alt="Joshua Hoban" />
               <div>
                 <div className="nm">Joshua Hoban</div>
-                <div className="rl">// open to SWE internships</div>
+                <div className="rl">// Software Engineer</div>
               </div>
             </div>
           </div>

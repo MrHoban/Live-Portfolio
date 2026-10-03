@@ -3,8 +3,8 @@ import Reveal from './Reveal'
 const stats = [
   { value: '6', unit: '+', label: 'Years in IT' },
   { value: '4', unit: '', label: 'Years Programming' },
-  { value: '3', unit: '', label: 'Certifications' },
-  { value: 'B.S.', unit: '', label: 'SWE · C#/Java Track' },
+  { value: '4', unit: '', label: 'Certifications' },
+  { value: 'B.S.', unit: '', label: 'Cybersecurity & IA · WGU' },
 ]
 
 export default function Stats() {

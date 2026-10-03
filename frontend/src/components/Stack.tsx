@@ -38,7 +38,7 @@ const groups: StackGroup[] = [
   {
     num: '$_',
     title: 'Automation & Scripting',
-    desc: 'Removing the manual work in MSP & NOC operations.',
+    desc: 'Removing the manual work in security and IT operations.',
     chips: [
       { label: 'PowerShell 7+', lead: true },
       { label: 'Python', lead: true },
